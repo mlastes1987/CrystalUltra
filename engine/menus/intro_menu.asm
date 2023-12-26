@@ -9,9 +9,6 @@ Intro_MainMenu:
 	farcall MainMenu
 	jp StartTitleScreen
 
-IntroMenu_DummyFunction: ; unreferenced
-	ret
-
 PrintDayOfWeek:
 	push de
 	ld hl, .Days
@@ -746,15 +743,6 @@ NamePlayer:
 .Kris:
 	db "KRIS@@@@@@@"
 
-GSShowPlayerNamingChoices: ; unreferenced
-	call LoadMenuHeader
-	call VerticalMenu
-	ld a, [wMenuCursorY]
-	dec a
-	call CopyNameFromMenu
-	call CloseWindow
-	ret
-
 StorePlayerName:
 	ld a, "@"
 	ld bc, NAME_LENGTH
@@ -1009,18 +997,6 @@ RunTitleScreen:
 	scf
 	ret
 
-UnusedTitlePerspectiveScroll: ; unreferenced
-; Similar behavior to Intro_PerspectiveScrollBG.
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
-	ret
-
 TitleScreenScene:
 	ld e, a
 	ld d, 0
@@ -1037,11 +1013,6 @@ TitleScreenScene:
 	dw TitleScreenTimer
 	dw TitleScreenMain
 	dw TitleScreenEnd
-
-TitleScreenNextScene: ; unreferenced
-	ld hl, wJumptableIndex
-	inc [hl]
-	ret
 
 TitleScreenEntrance:
 ; Animate the logo:

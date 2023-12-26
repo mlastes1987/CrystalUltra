@@ -646,9 +646,6 @@ PokeAnim_ConvertAndApplyBitmask:
 .done
 	ret
 
-.UnusedSizeData: ; unreferenced
-	db 6, 5, 4
-
 .GetTilemap:
 	push af
 	ld a, [wPokeAnimFrontpicHeight]
