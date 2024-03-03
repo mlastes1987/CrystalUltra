@@ -629,45 +629,45 @@ TrainerCard_KantoBadgesOAM:
 	; cycle 2: face tile, in1 tile, in2 tile, in3 tile
 
 	dw wKantoBadges
-
+	
 	; Boulderbadge
-	db $68, $18, 0
+	db $80, $38, 0
 	db $00, $20 | (1 << 7), $24, $20
 	db $00, $20 | (1 << 7), $24, $20
 
 	; Cascadebadge
-	db $68, $38, 0
+	db $68, $58, 1
 	db $04, $20 | (1 << 7), $24, $20
 	db $04, $20 | (1 << 7), $24, $20
-
+	
 	; Thunderbadge
-	db $68, $58, 0
+	db $68, $18, 2
 	db $08, $20 | (1 << 7), $24, $20
 	db $08, $20 | (1 << 7), $24, $20
 
 	; Rainbowbadge
-	db $68, $78, 0
+	db $68, $38, 3
 	db $0c, $20 | (1 << 7), $24, $20
 	db $0c, $20 | (1 << 7), $24, $20
-
-	; Soulbadge
-	db $80, $18, 0
-	db $10, $20 | (1 << 7), $24, $20
-	db $10, $20 | (1 << 7), $24, $20
 
 	; Marshbadge
-	db $80, $38, 0
+	db $68, $78, 4
 	db $14, $20 | (1 << 7), $24, $20
 	db $14, $20 | (1 << 7), $24, $20
 
+	; Soulbadge
+	db $80, $18, 5
+	db $10, $20 | (1 << 7), $24, $20
+	db $10, $20 | (1 << 7), $24, $20
+
 	; Volcanobadge
-	db $80, $58, 0
+	db $80, $58, 6
 	db $18, $20 | (1 << 7), $24, $20
 	db $18, $20 | (1 << 7), $24, $20
 
 	; Earthbadge
 	; X-flips on alternate cycles.
-	db $80, $78, 0
+	db $80, $78, 7
 	db $1c,            $20 | (1 << 7), $24, $20
 	db $1c | (1 << 7), $20 | (1 << 7), $24, $20
 
