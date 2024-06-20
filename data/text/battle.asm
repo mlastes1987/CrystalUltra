@@ -7,6 +7,11 @@ BattleText_PlayerPickedUpPayDayMoney:
 	text "!"
 	prompt
 
+BattleText_QuickClaw:
+	text "<USER>'s"
+	line "QUICK CLAW procs!"
+	prompt
+
 WildPokemonAppearedText:
 	text "Wild @"
 	text_ram wEnemyMonNickname
