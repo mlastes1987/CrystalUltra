@@ -1741,7 +1741,7 @@ AI_Smart_MeanLook:
 	jp z, AIDiscourageMove
 
 ; 80% chance to greatly encourage this move if the enemy is badly poisoned.
-	ld a, [wPlayerSubStatus5]
+    ld a, [wPlayerSubStatus5]
 	bit SUBSTATUS_TOXIC, a
 	jr nz, .encourage
 
@@ -2930,7 +2930,9 @@ AI_Aggressive:
 ; If no damaging move deals damage to the player (immune),
 ; no move will be discouraged
 
-; Figure out which attack does the most damage and put it in c.
+; Also greatly discourages ineffective moves since this overrides the
+; regular type matchup layer
+
 	ld hl, wEnemyMonMoves
 	ld bc, 0
 	ld de, 0
@@ -3000,6 +3002,20 @@ AI_Aggressive:
 	jr z, .checkmove2
 
 	call AIGetEnemyMove
+	
+; This routine overrides the type matchup AI layer, since it's typically
+; superior to it. As a result, deal with ineffective moves here too which
+; is discouraged far more than other less damaging moves.
+	push hl
+	push de
+	push bc
+	farcall BattleCheckTypeMatchup
+	pop bc
+	pop de
+	pop hl
+	ld a, [wTypeMatchup]
+	and a
+	call z, AIDiscourageMove
 
 ; Ignore this move if its power is 0 or 1.
 ; Moves such as Seismic Toss, Hidden Power,
