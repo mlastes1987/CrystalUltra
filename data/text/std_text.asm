@@ -59,24 +59,16 @@ NurseAskHealText:
 	done
 
 NurseTakePokemonText:
-	text "OK, may I see your"
-	line "#MON?"
+	text "Let's heal your"
+	line "#MON OK?"
 	done
 
-NurseReturnPokemonText:
-	text "Thank you for"
-	line "waiting."
-
-	para "Your #MON are"
-	line "fully healed."
+NurseReturnPokemonShortText:
+	text "Your #MON are"
+	line "fighting fit!"
 	done
 
 NurseGoodbyeText:
-	text "We hope to see you"
-	line "again."
-	done
-
-; not used
 	text "We hope to see you"
 	line "again."
 	done
