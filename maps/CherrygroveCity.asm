@@ -3,6 +3,8 @@
 	const CHERRYGROVECITY_RIVAL
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
+	const CHERRYGROVECITY_TWIN1
+	const CHERRYGROVECITY_TWIN2
 	const CHERRYGROVECITY_FISHER
 
 CherrygroveCity_MapScripts:
@@ -203,6 +205,30 @@ CherrygroveYoungsterScript:
 .HavePokedex:
 	writetext CherrygroveYoungsterText_HavePokedex
 	waitbutton
+	closetext
+	end
+
+CherrygroveCityTwin1Script:
+	faceplayer
+	opentext
+	writetext CherrygroveTwin1Text
+	promptbutton
+	giveitem RARE_CANDY, 99
+	writetext CherrygroveTwin1Text2
+	promptbutton
+	itemnotify
+	closetext
+	end
+
+CherrygroveCityTwin2Script:
+	faceplayer
+	opentext
+	writetext CherrygroveTwin2Text
+	promptbutton
+	giveitem MASTER_BALL, 99
+	writetext CherrygroveTwin2Text2
+	promptbutton
+	itemnotify
 	closetext
 	end
 
@@ -430,6 +456,22 @@ GuideGentNoText:
 	line "when you like."
 	done
 
+CherrygroveTwin1Text:
+	text "Hey! I'm Rare Candy"
+	line "Girl! Take these!"
+
+CherrygroveTwin1Text2:
+	text "Come back when you"
+	line "need more!"
+
+CherrygroveTwin2Text:
+	text "Hey! I'm Master Ball"
+	line "Girl! Take these!"
+
+CherrygroveTwin2Text2:
+	text "Come back when you"
+	line "need more!"
+
 CherrygroveRivalText_Seen:
 	text "<……> <……> <……>"
 
@@ -569,4 +611,6 @@ CherrygroveCity_MapEvents:
 	object_event 39,  6, SPRITE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	object_event 27, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
+	object_event 22, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveTwin1Script, -1
+	object_event 23, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveTwin2Script, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1
