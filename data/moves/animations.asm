@@ -253,10 +253,10 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
+	dw BattleAnim_NastyPlot
+	dw BattleAnim_DazzGleam
+	dw BattleAnim_MoonBlast
 	assert_table_length NUM_ATTACKS + 1
-	dw BattleAnim_Dummy
-	dw BattleAnim_Dummy
-	dw BattleAnim_Dummy
 	dw BattleAnim_SweetScent2
 	assert_table_length $100
 ; $100
@@ -2525,6 +2525,7 @@ BattleAnim_Guillotine:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_DazzGleam
 BattleAnim_Flash:
 	anim_1gfx BATTLE_ANIM_GFX_SPEED
 	anim_sound 0, 1, SFX_FLASH
@@ -4448,6 +4449,7 @@ BattleAnim_MirrorCoat:
 	anim_wait 32
 	anim_ret
 
+BattleAnim_NastyPlot:
 BattleAnim_PsychUp:
 	anim_1gfx BATTLE_ANIM_GFX_STATUS
 	anim_call BattleAnim_TargetObj_1Row
@@ -4509,6 +4511,7 @@ BattleAnim_Ancientpower:
 	anim_wait 6
 	anim_ret
 
+BattleAnim_MoonBlast:
 BattleAnim_ShadowBall:
 	anim_2gfx BATTLE_ANIM_GFX_EGG, BATTLE_ANIM_GFX_SMOKE
 	anim_bgp $1b

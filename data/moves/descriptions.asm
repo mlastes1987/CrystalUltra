@@ -252,17 +252,14 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
+	dw NastyPlotDescription
+	dw DazzGleamDescription
+	dw MoonBlastDescription
 	assert_table_length NUM_ATTACKS
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 	assert_table_length $100
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
 MoveFFDescription:
 Move00Description:
 	db "?@"
@@ -1270,3 +1267,15 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+NastyPlotDescription:
+	db "Sharply increases"
+	next "user's SPCL.ATK.@"
+
+DazzGleamDescription:
+	db "A blinding gleam"
+	next "causes confusion.@"
+
+MoonBlastDescription:
+	db "Energy from the"
+	next "Moon blasts forth.@"

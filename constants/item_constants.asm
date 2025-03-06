@@ -269,6 +269,9 @@ DEF TM01 EQU const_value
 	add_tm FIRE_PUNCH   ; f0
 	add_tm FURY_CUTTER  ; f1
 	add_tm NIGHTMARE    ; f2
+	add_tm NASTY_PLOT   ; f3
+	add_tm DAZZGLEAM    ; f4
+	add_tm MOONBLAST    ; f5
 DEF NUM_TMS EQU __tmhm_value__ - 1
 
 MACRO add_hm

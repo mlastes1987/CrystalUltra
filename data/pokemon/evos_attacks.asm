@@ -470,9 +470,12 @@ ClefairyEvosAttacks:
 	db 4, ENCORE
 	db 8, SING
 	db 13, DOUBLESLAP
+	db 15, DAZZGLEAM
+	db 16, MOONLIGHT
 	db 19, MINIMIZE
 	db 26, DEFENSE_CURL
 	db 34, METRONOME
+	db 35, MOONBLAST
 	db 43, MOONLIGHT
 	db 53, LIGHT_SCREEN
 	db 0 ; no more level-up moves
@@ -483,6 +486,8 @@ ClefableEvosAttacks:
 	db 1, DOUBLESLAP
 	db 1, METRONOME
 	db 1, MOONLIGHT
+    db 12, DAZZGLEAM
+	db 30, MOONBLAST
 	db 0 ; no more level-up moves
 
 VulpixEvosAttacks:
@@ -514,10 +519,13 @@ JigglypuffEvosAttacks:
 	db 4, DEFENSE_CURL
 	db 9, POUND
 	db 14, DISABLE
+	db 15, DAZZGLEAM
+	db 16, MOONLIGHT
 	db 19, ROLLOUT
 	db 24, DOUBLESLAP
 	db 29, REST
 	db 34, BODY_SLAM
+	db 35, MOONBLAST
 	db 39, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
@@ -527,6 +535,9 @@ WigglytuffEvosAttacks:
 	db 1, DISABLE
 	db 1, DEFENSE_CURL
 	db 1, DOUBLESLAP
+	db 12, DAZZGLEAM
+	db 13, MOONLIGHT
+	db 30, MOONBLAST
 	db 0 ; no more level-up moves
 
 ZubatEvosAttacks:
@@ -1656,10 +1667,13 @@ MrMimeEvosAttacks:
 	db 1, BARRIER
 	db 6, CONFUSION
 	db 11, SUBSTITUTE
+	db 13, DAZZGLEAM
+	db 14, MOONLIGHT
 	db 16, MEDITATE
 	db 21, DOUBLESLAP
 	db 26, LIGHT_SCREEN
 	db 26, REFLECT
+	db 30, MOONBLAST
 	db 31, ENCORE
 	db 36, PSYBEAM
 	db 41, BATON_PASS
@@ -2380,9 +2394,12 @@ TogepiEvosAttacks:
 	db 1, GROWL
 	db 1, CHARM
 	db 7, METRONOME
+	db 12, DAZZGLEAM
+	db 13, MOONLIGHT
 	db 18, SWEET_KISS
 	db 25, ENCORE
 	db 31, SAFEGUARD
+	db 35, MOONBLAST
 	db 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
 
@@ -2391,8 +2408,11 @@ TogeticEvosAttacks:
 	db 1, GROWL
 	db 1, CHARM
 	db 7, METRONOME
+	db 10, DAZZGLEAM
+	db 12, MOONLIGHT
 	db 18, SWEET_KISS
 	db 25, ENCORE
+	db 30, MOONBLAST
 	db 31, SAFEGUARD
 	db 38, DOUBLE_EDGE
 	db 0 ; no more level-up moves
@@ -2476,9 +2496,12 @@ MarillEvosAttacks:
 	db 3, DEFENSE_CURL
 	db 6, TAIL_WHIP
 	db 10, WATER_GUN
+	db 12, DAZZGLEAM
+	db 13, MOONLIGHT
 	db 15, ROLLOUT
 	db 21, BUBBLEBEAM
 	db 28, DOUBLE_EDGE
+	db 32, MOONBLAST
 	db 36, RAIN_DANCE
 	db 0 ; no more level-up moves
 
@@ -2493,6 +2516,7 @@ AzumarillEvosAttacks:
 	db 10, WATER_GUN
 	db 15, ROLLOUT
 	db 25, BUBBLEBEAM
+	db 30, MOONBLAST
 	db 36, DOUBLE_EDGE
 	db 48, RAIN_DANCE
 	db 0 ; no more level-up moves
@@ -2802,9 +2826,12 @@ SnubbullEvosAttacks:
 	db 4, TAIL_WHIP
 	db 8, CHARM
 	db 13, BITE
+	db 15, DAZZGLEAM
+	db 16, MOONLIGHT
 	db 19, LICK
 	db 26, ROAR
 	db 34, RAGE
+	db 35, MOONBLAST
 	db 43, TAKE_DOWN
 	db 0 ; no more level-up moves
 
@@ -2815,8 +2842,11 @@ GranbullEvosAttacks:
 	db 4, TAIL_WHIP
 	db 8, CHARM
 	db 13, BITE
+	db 14, DAZZGLEAM
+	db 15, MOONLIGHT
 	db 19, LICK
 	db 28, ROAR
+	db 30, MOONBLAST
 	db 38, RAGE
 	db 51, TAKE_DOWN
 	db 0 ; no more level-up moves
@@ -3044,6 +3074,7 @@ HoundourEvosAttacks:
 	db 20, BITE
 	db 27, FAINT_ATTACK
 	db 35, FLAMETHROWER
+	db 36, NASTY_PLOT
 	db 43, CRUNCH
 	db 0 ; no more level-up moves
 
@@ -3054,6 +3085,7 @@ HoundoomEvosAttacks:
 	db 7, ROAR
 	db 13, SMOG
 	db 20, BITE
+	db 24, NASTY_PLOT
 	db 30, FAINT_ATTACK
 	db 41, FLAMETHROWER
 	db 52, CRUNCH
