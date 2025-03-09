@@ -463,8 +463,13 @@ PokegearClock_Joypad:
 	call .UpdateClock
 	ld hl, hJoyLast
 	ld a, [hl]
-	and A_BUTTON | B_BUTTON | START | SELECT
+	and B_BUTTON | START | SELECT ; Pressing B, Select or Start here still exits Pokégear
 	jr nz, .quit
+
+ 	ld a, [hl]
+ 	and A_BUTTON
+ 	jr nz, .clockreset
+ 
 	ld a, [hl]
 	and D_RIGHT
 	ret z
@@ -475,6 +480,11 @@ PokegearClock_Joypad:
 	ld b, POKEGEARCARD_MAP
 	jr .done
 
+.clockreset
+ 	farcall RestartClock
+ 	call InitPokegearTilemap ; needed incase exit without setting the time
+ 	jr .done
+ 
 .no_map_card
 	ld a, [wPokegearFlags]
 	bit POKEGEAR_PHONE_CARD_F, a
