@@ -57,8 +57,8 @@ EngineFlags:
 	engine_flag wKantoBadges, CASCADEBADGE
 	engine_flag wKantoBadges, THUNDERBADGE
 	engine_flag wKantoBadges, RAINBOWBADGE
-	engine_flag wKantoBadges, SOULBADGE
 	engine_flag wKantoBadges, MARSHBADGE
+	engine_flag wKantoBadges, SOULBADGE
 	engine_flag wKantoBadges, VOLCANOBADGE
 	engine_flag wKantoBadges, EARTHBADGE
 
