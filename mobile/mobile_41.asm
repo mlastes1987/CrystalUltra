@@ -317,11 +317,6 @@ StubbedTrainerRankings_FruitPicked:
 	ld hl, sTrainerRankingFruitPicked
 	jp StubbedTrainerRankings_Increment3Byte
 
-StubbedTrainerRankings_Healings:
-	ret
-	ld hl, sTrainerRankingHealings
-	jp StubbedTrainerRankings_Increment3Byte
-
 StubbedTrainerRankings_MysteryGift:
 	ret
 	ld hl, sTrainerRankingMysteryGift
