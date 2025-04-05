@@ -489,11 +489,7 @@ Script_verbosegiveitem:
 	ld de, GiveItemScript
 	jp ScriptCall
 
-GiveItemScript_DummyFunction:
-	ret
-
 GiveItemScript:
-	callasm GiveItemScript_DummyFunction
 	writetext .ReceivedItemText
 	iffalse .Full
 	waitsfx
