@@ -210,7 +210,7 @@ endc
 ApplyRunningEffectOnEncounterRate::
 ; Running doubles encounter rate.
 	ld a, [wPlayerState]
-	cp PLAYER_RUN
+	cp PLAYER_BIKE
 	ret nz
 	sla b
 	ret
