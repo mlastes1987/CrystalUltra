@@ -296,7 +296,7 @@ endc
 
 ; Downhill riding is slower when not moving down.
 	call .BikeCheck
-	jr nz, .HandleWalkAndRun
+	jr nz, .walk
 
 	ld hl, wBikeFlags
 	bit BIKEFLAGS_DOWNHILL_F, [hl]
@@ -346,28 +346,6 @@ endc
 .bump
 	xor a
 	ret
-
-.HandleWalkAndRun
-	ld a, [wWalkingDirection]
-	cp STANDING
-	jr z, .ensurewalk
-	ldh a, [hJoypadDown]
-	and B_BUTTON
-if DEF(_DEBUG)
-else
-	cp B_BUTTON		; Delete this line to Default Run, Press B to walk
-endc
-	jr nz, .ensurewalk
-	ld a, [wPlayerState]
-	cp PLAYER_RUN
-	call nz, .StartRunning
-	jr .fast
-
-.ensurewalk
-	ld a, [wPlayerState]
-	cp PLAYER_NORMAL
-	call nz, .StartWalking
-	jr .walk
 
 .TrySurf:
 	call .CheckSurfPerms
@@ -845,22 +823,6 @@ ENDM
 	ld a, PLAYER_NORMAL
 	ld [wPlayerState], a
 	call UpdatePlayerSprite ; UpdateSprites
-	pop bc
-	ret
-
-.StartRunning:
-	ld a, PLAYER_RUN
-	ld [wPlayerState], a
-	push bc
-	farcall UpdatePlayerSprite
-	pop bc
-	ret
-
-.StartWalking:
-	ld a, PLAYER_NORMAL
-	ld [wPlayerState], a
-	push bc
-	farcall UpdatePlayerSprite
 	pop bc
 	ret
 
