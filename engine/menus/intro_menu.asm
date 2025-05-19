@@ -604,7 +604,8 @@ Continue_DisplayGameTime:
 
 OakSpeech:
 	farcall InitClock
-	call RotateFourPalettesLeft
+	ld c, 31
+	call FadeToBlack
 	call ClearTilemap
 
 if DEF(_DEBUG)
@@ -612,8 +613,8 @@ else
 	ld de, MUSIC_ROUTE_30
 	call PlayMusic
 
-	call RotateFourPalettesRight
-	call RotateThreePalettesRight
+	ld c, 31
+	call FadeToWhite
 	xor a
 	ld [wCurPartySpecies], a
 	ld a, POKEMON_PROF
@@ -626,7 +627,8 @@ else
 
 	ld hl, OakText1
 	call PrintText
-	call RotateThreePalettesRight
+	ld c, 15
+	call FadeToWhite
 	call ClearTilemap
 
 	ld a, WOOPER
@@ -649,7 +651,8 @@ else
 	call PrintText
 	ld hl, OakText4
 	call PrintText
-	call RotateThreePalettesRight
+	ld c, 15
+	call FadeToWhite
 	call ClearTilemap
 
 	xor a
@@ -665,7 +668,8 @@ else
 	ld hl, OakText5
 	call PrintText
 endc
-	call RotateThreePalettesRight
+	ld c, 10
+	call DelayFrames
 	call ClearTilemap
 
 	xor a
@@ -734,8 +738,8 @@ NamePlayer:
 	ld b, NAME_PLAYER
 	ld de, wPlayerName
 	farcall NamingScreen
-
-	call RotateThreePalettesRight
+	ld c, 15
+	call FadeToWhite
 	call ClearTilemap
 
 	call LoadFontsExtra
@@ -747,7 +751,7 @@ NamePlayer:
 
 	ld b, SCGB_TRAINER_OR_MON_FRONTPIC_PALS
 	call GetSGBLayout
-	call RotateThreePalettesLeft
+	call Intro_RotatePalettesLeftFrontpic
 
 	ld hl, wPlayerName
 	ld de, .Chris
@@ -791,29 +795,28 @@ ShrinkPlayer:
 	pop af
 	rst Bankswitch
 
-	ld c, 8
+	ld c, 16
 	call DelayFrames
 
 	ld hl, Shrink1Pic
 	ld b, BANK(Shrink1Pic)
 	call ShrinkFrame
 
-	ld c, 8
+	ld c, 16
 	call DelayFrames
 
 	ld hl, Shrink2Pic
 	ld b, BANK(Shrink2Pic)
 	call ShrinkFrame
 
-	ld c, 8
+	ld c, 16
 	call DelayFrames
 
-	hlcoord 6, 5
-	ld b, 7
-	ld c, 7
+	hlcoord 6, 4
+	lb bc, 7, 7
 	call ClearBox
 
-	ld c, 3
+	ld c, 6
 	call DelayFrames
 
 	call Intro_PlacePlayerSprite
@@ -822,7 +825,8 @@ ShrinkPlayer:
 	ld c, 50
 	call DelayFrames
 
-	call RotateThreePalettesRight
+	ld c, 15
+	call FadeToWhite
 	call ClearTilemap
 	ret
 
@@ -839,12 +843,18 @@ Intro_RotatePalettesLeftFrontpic:
 	ret
 
 IntroFadePalettes:
-	dc 1, 1, 1, 0
-	dc 2, 2, 2, 0
-	dc 3, 3, 3, 0
-	dc 3, 3, 2, 0
-	dc 3, 3, 1, 0
-	dc 3, 2, 1, 0
+;	dc 1, 1, 1, 0
+;	dc 2, 2, 2, 0
+;	dc 3, 3, 3, 0
+;	dc 3, 3, 2, 0
+;	dc 3, 3, 1, 0
+;	dc 3, 2, 1, 0
+	db %01010100
+	db %10101000
+	db %11111100
+	db %11111000
+	db %11110100
+	db %11100100
 .End
 
 Intro_WipeInFrontpic:
