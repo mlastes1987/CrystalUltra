@@ -193,13 +193,10 @@ _CGB_PokegearPals:
 	ld bc, 6 palettes
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
-
-	ld de, wBGPals1 palette 6
- 	ld a, PREDEFPAL_POKEGEAR_TOD_ICONS
- 	call GetPredefPal
- 	call LoadHLPaletteIntoDE
-
- 	call ApplyAttrmap
+	ld hl, PokegearOBPals
+	ld de, wOBPals1
+	ld bc, 2 palettes
+	call FarCopyColorWRAM
 	call ApplyPals
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
@@ -1507,3 +1504,6 @@ GS_CGB_MysteryGift: ; unreferenced
 
 .MysteryGiftPalette:
 INCLUDE "gfx/mystery_gift/gs_mystery_gift.pal"
+
+PokegearOBPals:
+INCLUDE "gfx/icons/icons.pal" ; todo: replace this polished port
