@@ -38,6 +38,7 @@ ClosePokepic::
 	ldh [hBGMapMode], a
 
 	call UpdateSprites
+	farcall EnableDynPalUpdates
 	call LoadStandardFont
 	ret
 
