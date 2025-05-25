@@ -256,7 +256,7 @@ ItemNameOrder:
 	db EGG_TICKET
 	db POKE_FLUTE
 	db TOWN_MAP
-	db ITEM_19
+	db POCKET_PC
 	db ITEM_2D
 	db ITEM_32
 	db ITEM_5A

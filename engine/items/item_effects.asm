@@ -2649,6 +2649,14 @@ Play_SFX_FULL_HEAL:
 	pop de
 	ret
 
+ExpShareToggleOff:
+	text_far _ExpShareToggleOff
+	text_end
+ 
+ExpShareToggleOn:
+	text_far _ExpShareToggleOn
+	text_end
+
 UseItemText:
 	ld hl, ItemUsedText
 	call PrintText
