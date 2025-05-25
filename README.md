@@ -8,6 +8,7 @@ Based on [**Nayru62's New Dex Newbox**](https://github.com/RaJah239/Nayru62-s-De
 **Quality of life features**
 - Pocket PC (received after you choose your starter)
 - Gen 6 EXP Share (received after you see Mr. Pokemon)
+- Reusable TMs
 - Tradeback NPC (Goldenrod Dept. Store B1F) for all trade evolutions
 - Restored GS Ball Celebi Event (After defeating Elite Four)
 - Kurt makes Pokeballs instantly
