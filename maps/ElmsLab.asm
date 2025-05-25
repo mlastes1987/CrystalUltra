@@ -1405,7 +1405,7 @@ AideText_GetEXPShareText:
 	para "It's an EXP Share!"
 	done
 	
-AideText_PocketPCInfoText:
+AideText_EXPShareInfoText:
 	text "Share EXP with your"
 	line "party."
 	done
