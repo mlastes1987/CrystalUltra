@@ -25,7 +25,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw PocketPCDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -354,8 +354,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+PocketPCDesc:
+	db   "Access the PC"
+	next "right here!@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -480,7 +481,7 @@ TeruSama5Desc:
 
 ExpShareDesc:
 	db   "Shares battle EXP."
-	next "Points. (HOLD)@"
+	next "Points.@"
 
 OldRodDesc:
 	db   "Use by water to"

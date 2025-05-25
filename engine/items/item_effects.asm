@@ -38,7 +38,7 @@ ItemEffects:
 	dw EvoStoneEffect      ; FIRE_STONE
 	dw EvoStoneEffect      ; THUNDERSTONE
 	dw EvoStoneEffect      ; WATER_STONE
-	dw NoEffect            ; ITEM_19
+	dw PocketPCEffect      ; POCKET_PC
 	dw VitaminEffect       ; HP_UP
 	dw VitaminEffect       ; PROTEIN
 	dw VitaminEffect       ; IRON
@@ -70,7 +70,7 @@ ItemEffects:
 	dw CoinCaseEffect      ; COIN_CASE
 	dw ItemfinderEffect    ; ITEMFINDER
 	dw PokeFluteEffect     ; POKE_FLUTE
-	dw NoEffect            ; EXP_SHARE
+	dw ExpShareEffect      ; EXP_SHARE
 	dw OldRodEffect        ; OLD_ROD
 	dw GoodRodEffect       ; GOOD_ROD
 	dw NoEffect            ; SILVER_LEAF
@@ -2336,6 +2336,21 @@ UseRod:
 ItemfinderEffect:
 	farcall ItemFinder
 	ret
+
+PocketPCEffect:
+	farcall PocketPCFunction
+	ret
+
+ExpShareEffect:
+	ld a, [wExpShareToggle]
+	xor 1
+	ld [wExpShareToggle], a
+	and a
+	ld hl, ExpShareToggleOn
+	jp nz, PrintText
+
+	ld hl, ExpShareToggleOff
+	jp PrintText
 
 RestorePPEffect:
 	ld a, [wCurItem]

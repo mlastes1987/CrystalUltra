@@ -3,6 +3,8 @@
 	const CHERRYGROVECITY_RIVAL
 	const CHERRYGROVECITY_TEACHER
 	const CHERRYGROVECITY_YOUNGSTER
+	const CHERRYGROVECITY_TWIN
+	const CHERRYGROVECITY_TWIN2
 	const CHERRYGROVECITY_FISHER
 
 CherrygroveCity_MapScripts:
@@ -202,6 +204,28 @@ CherrygroveYoungsterScript:
 
 .HavePokedex:
 	writetext CherrygroveYoungsterText_HavePokedex
+	waitbutton
+	closetext
+	end
+
+CherrygroveTwinScript:
+	faceplayer
+	opentext
+	writetext CherrygroveTwinText1
+	promptbutton
+	verbosegiveitem RARE_CANDY, 99
+	writetext CherrygroveTwinText2
+	waitbutton
+	closetext
+	end
+
+CherrygroveTwin2Script:
+	faceplayer
+	opentext
+	writetext CherrygroveTwin2Text1
+	promptbutton
+	verbosegiveitem MASTER_BALL, 99
+	writetext CherrygroveTwin2Text2
 	waitbutton
 	closetext
 	end
@@ -512,6 +536,30 @@ CherrygroveYoungsterText_HavePokedex:
 	line "a #MON CENTER."
 	done
 
+CherrygroveTwinText1:
+	text "Hey, want some"
+	line "RARE CANDYs?"
+
+	para "Here you go!"
+	done
+
+CherrygroveTwinText2:
+	text "Come see me"
+	line "again!"
+	done
+
+CherrygroveTwin2Text1:
+	text "Hey, want some"
+	line "MASTER BALLs?"
+
+	para "Here you go!"
+	done
+
+CherrygroveTwin2Text2:
+	text "Come see me"
+	line "again!"
+	done
+
 MysticWaterGuyTextBefore:
 	text "A #MON I caught"
 	line "had an item."
@@ -564,4 +612,6 @@ CherrygroveCity_MapEvents:
 	object_event 39,  6, SPRITE_RIVAL, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_CHERRYGROVE_CITY
 	object_event 27, 12, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CherrygroveTeacherScript, -1
 	object_event 23,  7, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CherrygroveYoungsterScript, -1
+	object_event 22, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveTwinScript, -1
+	object_event 23, 13, SPRITE_TWIN, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CherrygroveTwin2Script, -1
 	object_event  7, 12, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, MysticWaterGuy, -1

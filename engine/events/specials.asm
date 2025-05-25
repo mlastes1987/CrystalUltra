@@ -425,6 +425,10 @@ TrainerHouse:
 	ld [wScriptVar], a
 	jp CloseSRAM
 
+TradebackNPC:
+	farcall TradebackGuy
+	ret
+
 BackupPartyHeldItems:
 	ld hl, wPartyMon1Item
 	ld de, wPartyMonItemBackup

@@ -459,6 +459,7 @@ AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -466,6 +467,7 @@ AideScript_WalkPotion2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -477,6 +479,16 @@ AideScript_GivePotion:
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
+	end
+
+AideScript_GivePocketPC:
+	opentext
+	writetext AideText_GetPocketPCText
+	promptbutton
+	verbosegiveitem POCKET_PC
+	writetext AideText_PocketPCInfoText
+	waitbutton
+	closetext
 	setscene SCENE_ELMSLAB_NOOP
 	end
 
@@ -484,6 +496,7 @@ AideScript_WalkBalls1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GiveYouBalls
+	scall AideScript_GiveEXPShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -491,6 +504,7 @@ AideScript_WalkBalls2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GiveYouBalls
+	scall AideScript_GiveEXPShare
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -505,11 +519,21 @@ AideScript_GiveYouBalls:
 	promptbutton
 	itemnotify
 	closetext
-	setscene SCENE_ELMSLAB_NOOP
 	end
 
 AideScript_ReceiveTheBalls:
 	jumpstd ReceiveItemScript
+	end
+
+AideScript_GiveEXPShare:
+	opentext
+	writetext AideText_GetEXPShareText
+	promptbutton
+	verbosegiveitem EXP_SHARE
+	writetext AideText_EXPShareInfoText
+	waitbutton
+	closetext
+	setscene SCENE_ELMSLAB_NOOP
 	end
 
 ElmsAideScript:
@@ -1360,6 +1384,30 @@ ElmsLabPCText:
 
 	para "…It says on the"
 	line "screen…"
+	done
+
+AideText_GetPocketPCText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's a Pocket PC!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Use this to manage"
+	line "your party."
+	done
+
+AideText_GetEXPShareText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's an EXP Share!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Share EXP with your"
+	line "party."
 	done
 
 ElmsLab_MapEvents:

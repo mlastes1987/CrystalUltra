@@ -1,45 +1,18 @@
 
-# Nayru62's Super Pokédex ported to Newbox 
-A small project that ports Nayru62's Super Pokédex to Newbox by Rangi42, FredrIQ, vulcandth and adds a few features
+# Pokemon Crystal Ultra
 
-- Porting done by https://github.com/TimKun55
-- Recommended RGBDS version: v 0.7
-- Recommended Emulator: BGB
-- Note: This project does not use pokecrystal16
+![Screenshot](crystalultra-box-art.jpg)
 
-# Project's Base - Newbox: Complete overhaul of Bill's PC
-
-https://github.com/fellowship-of-the-roms/pokecrystal/tree/newbox
-
-# Nayru62 Pokédex
-https://github.com/Nayru62/pokecrystal/tree/8.0_Nayrus_Pokedex
-
-*Bundled:* [Idain's](https://github.com/Idain) [Custom Dex Colors](https://github.com/pret/pokecrystal/wiki/Customizable-Pok%C3%A9dex-Color) and [Toggle Shiny Palettes](https://github.com/pret/pokecrystal/wiki/Option-to-show-shiny-colors-in-Pok%C3%A9dex)
-
-- [Unique Mon Icons](https://github.com/pret/pokecrystal/wiki/Add-a-new-party-menu-icon)
-- [Expanded Tilesets to 255](https://github.com/pret/pokecrystal/wiki/Expand-tilesets-from-192-to-255-tiles), 
-- Naryu's Gen3 Type/Status/Cat Tiles. Pokedex portion must be implemented. Other parts, optional.
-
-FEATURES:  Base stats and info, Move Info, Detailed area info, Evolution chart, and sprite page showing animated sprites (reflects shiny toggle too).
-
-Move Information: Lvl-Up Moves -> Field Moves (plus lvl learned and/or TM/HM/Move Tutor) -> Egg Moves -> TMs.
-
-AREA Pages: Currently supports Johto/Kanto Walking/grass/surfing encounters plus their swarms. Fishing Rods information is also included. Right now, all it will show you is the relevant Fishing Group Name. To check your local Fishing Group, check the PokeGear.
-
-POKEGEAR: Now shows the detailed name of map you're currently in (based on Map Group & Map Number) and it also reads the map's attribute to see it's fishing group, if it has one.
-
-
-
-# What's added?
-
-![image](https://github.com/user-attachments/assets/5f77dc6a-40d1-4ac9-865a-60a1f3900950)
-![evo_page_demo](https://github.com/user-attachments/assets/faaffcf4-2982-4478-bf4e-18730813f387)
-![image](https://github.com/user-attachments/assets/30b6d655-d8ce-44a3-b493-1d3ab82a2e65)
-![image](https://github.com/user-attachments/assets/926066af-ad87-42b9-974d-17ecf67f0f5d)
-![image](https://github.com/user-attachments/assets/22c40dde-b07f-4324-8584-5af9ab323165)
-![image](https://github.com/user-attachments/assets/2a9d32df-eaec-4177-b295-25de420ace24)
+Based on [**Nayru62's New Dex Newbox**](https://github.com/RaJah239/Nayru62-s-Dex-Newbox) by RaJah239.
 
 **Quality of life features**
+- Pocket PC (received after you choose your starter)
+- Gen 6 EXP Share (received after you see Mr. Pokemon)
+- Gain experience from catching mons
+- Tradeback NPC (Goldenrod Dept. Store B1F) for all trade evolutions
+- Restored GS Ball Celebi Event (After defeating Elite Four)
+- Kurt makes Pokeballs instantly
+- Master Ball/Rare Candy Girl (in Cherrygrove City)
 - 60 fps overworld and smooth fading added
 - Dynamic overworld sprites and palettes added
 - Evening added from 5:00pm - 8:00pm and it uses 60% of day encounters and 40% of the night encounters
@@ -136,116 +109,3 @@ Still get EVs
 **Graphics**
 - Bag graphic by TimKun55
 - Uncensored beauty, fisherman, sage, medium and swimmer_f's trainer sprites
-
-**Debug ROM**
-- Assemble Debug ROM with `make d`
-- Shorten intro
-- Interact with Player's Room radio to get a team of Pokémon, set many flags and warp to Cherrygrove City
-- Press A on Egg Stat Screen to hatch any egg after a singe step
-
-- Access "DEBUG ROOM" on Continue screen after creating a Save File
-- Note: Ensure "BATTLE SKIP" in "DEBUG ROOM" is set to "DO" and not SKIP" as to not OHKO all enemies (if needed)
-
-
-Credit to https://github.com/SoupPotato/Sourcrystal for the following:
-
-Hold `A` to walk through walls
-
-Hold `A` to ignore trainers
-
-Hold `A` to disable wild encounters
-
-
-# Last commit taken from pokecrystal:
-https://github.com/pret/pokecrystal/commit/c1da20e2f12f95c935500151d15f455e7e7eb213
-
-# Credits
-
-Rangi42 - https://github.com/Rangi42
-
-FredrIQ - https://github.com/FredrIQ
-
-vulcandth - https://github.com/vulcandth
-
-Nayru62 - https://github.com/Nayru62
-
-Idain - https://github.com/Idain
-
-TimKun55 - https://github.com/TimKun55
-
-Grate Oracle Lewot - https://github.com/Grate-Oracle-Lewot
-
-GetKosiorekt - https://github.com/GetKosiorekt
-
-Major Agnostic - https://github.com/MajorAgnostic
-
-Nick Jam - https://github.com/Nick-PC
-
-Sour Apple - https://github.com/SoupPotato/Sourcrystal
-
-rodmcosta - https://github.com/rodmcosta
-
-4rdorin - https://github.com/4rdorin
-
-cRz-Shadows - https://github.com/cRz-Shadows
-
-AtmaBuster - https://github.com/AtmaBuster/crystalleaf
-
-DanielOlivaw - https://github.com/DanielOlivaw/pokecrystal16
-
-PurnPum - https://github.com/PurnPum/Sketchy-Crystal
-
-froggestspirit - https://github.com/froggestspirit/crystalcomplete
-
-FrenchOrange - https://github.com/FrenchOrange
-
-PiaCRT - https://github.com/PiaCarrot
-
-UberMedic7 - https://github.com/UberMedic7
-
-NekrobaDA - https://github.com/NekrobaDA
-
-xaerochill - https://github.com/xaerochill
-
-oatspear - https://github.com/oatspear
-
-And everyone that worked on the pokecrsytal disassembly and wrote their tutorials in the wiki which literally carried me + everyone on the pret discord server~!
-
-Special Thanks to the following:
-
-
-GetKosiorekt, Grate Oracle Lewot, TimKun55, Nayru62, 4rdorin, Major Agnostic, Idain, Sour Apple, lifeofmauri, FrenchOrange, PiaCRT, mauvemon, PerreteCartago, rodmcosta, cRz-Shadows, ElfinHilon10, dannye, FootFingers, Ferropexola, weepingwitch, SonicRay100, Handheld Hero, 8bitzeta, Pferomon, UberMedic7, NekrobaDA, xaerochill and oatspear
-
-
-**Vanilla Bugfixes**
-- All Bugs and Glitches fixed from here: https://pret.github.io/pokecrystal/bugs_and_glitches.html#some-trainer-npcs-have-inconsistent-overworld-sprites minus "Slot machine payout sound effects cut each other off" since I prefer the vanilla game's sound effect.
-- All Design Flaws fixed from here: https://pret.github.io/pokecrystal/design_flaws.html#identical-sine-wave-code-and-data-is-repeated-five-times minus "Identical sine wave code and data is repeated five times"
-
-**Known Bugs**
-- Very few large custom sprites when viewed in the Pokédex, via Pics to see their animation, get slightly glitchy. 
-
-
-# Pokémon Crystal [![Build Status][ci-badge]][ci]
-
-This is a disassembly of Pokémon Crystal:
-https://github.com/pret/pokecrystal
-
-To set up the repository, see [INSTALL.md](INSTALL.md).
-
-## See also
-
-- [**FAQ**](FAQ.md)
-- [**Documentation**][docs]
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- [**Symbols**][symbols]
-
-You can find us on [Discord (pret, #pokecrystal)](https://discord.gg/d5dubZ3).
-
-For other pret projects, see [pret.github.io](https://pret.github.io/).
-
-[docs]: https://pret.github.io/pokecrystal/
-[wiki]: https://github.com/pret/pokecrystal/wiki
-[tutorials]: https://github.com/pret/pokecrystal/wiki/Tutorials
-[symbols]: https://github.com/pret/pokecrystal/tree/symbols
-[ci]: https://github.com/pret/pokecrystal/actions
-[ci-badge]: https://github.com/pret/pokecrystal/actions/workflows/main.yml/badge.svg
