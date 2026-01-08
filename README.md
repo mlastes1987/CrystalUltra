@@ -41,7 +41,7 @@ POKEGEAR: Now shows the detailed name of map you're currently in (based on Map G
 
 **Quality of life features**
 - 60 fps overworld and smooth fading added
-- Dynamic overworld sprites and palettes added
+- Dynamic overworld palettes added
 - Evening added from 5:00pm - 8:00pm and it uses 60% of day encounters and 40% of the night encounters
 - View free space on each compile (pokecrystal.gbc or pokecrystal_debug.gbc)
 - Instant Text added, removed Slow and Medium text speeds
@@ -108,7 +108,6 @@ POKEGEAR: Now shows the detailed name of map you're currently in (based on Map G
 - Quick Claw activation text added
 - Prevent Steel‐types from being poisoned by Twineedle
 - Prevent burning fire types and freezing ice types by Tri-Attack
-- Player Loss text added (Only used in the Cherrygrove and Burn Tower battles)
 - Short beeping noise for low HP
 - Lose money proportional to badges and lead level Pokémon
 - Replaced stat experience with EVs & Can max out EVs on all stats (can be modified by tutorial in pokecrsytal's wiki to work like main series)
